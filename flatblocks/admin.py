@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.conf import settings
+from flatblocks import settings
 from flatblocks.models import FlatBlock
 
 
@@ -10,5 +10,5 @@ class FlatBlockAdmin(admin.ModelAdmin):
     search_fields = ('slug', 'header', 'content', 'subdomain')
 
 
-if not settings.CANCAEL_ADMIN_AUTO_REGISTRATION:
+if not settings.CANCEL_ADMIN_AUTO_REGISTRATION:
     admin.site.register(FlatBlock, FlatBlockAdmin)
